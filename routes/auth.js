@@ -48,7 +48,7 @@ router.post("/login", async (req, res) => {
 
     // Validation
     if (!username || !password) {
-        res.status(400).json({ success: false, message: "Missing username and/or password!" })
+        return res.status(400).json({ success: false, message: "Missing username and/or password!" })
     }
 
     try {

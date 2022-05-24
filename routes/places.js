@@ -30,7 +30,7 @@ router.post("/", verifyToken, async (req, res) => {
 // @Route GET api/places
 // @desc Get places
 // access Private
-router.get("/", verifyToken, async (req, res) => {
+router.get("/", async (req, res) => {
     try {
         const places = await Place.find()
         res.status(200).json({ success: true, places })
